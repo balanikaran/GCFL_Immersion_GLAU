@@ -1,0 +1,42 @@
+{
+  "examples": [
+    {
+      "string": "We try to quantitatively capture these characteristics by defining a set of indexes, which can be computed using the mosaic image and the corresponding ground truth:\n\\begin{itemize}\n    \\item $\\mu_{A_T}$ and $\\sigma_{A_T}$, the mean and standard deviation of the tiles area $A_T$, respectively;\n    \\item $\\rho_\\text{filler}$, the ratio between the filler area and the overall mosaic are, computed as $\\rho_\\text{filler}=\\frac{\\sum_{T \\in \\mathcal{T} A_T}}{A}$, being $A$ the area of the mosaic;\n    \\item \\todo{does it worth?};\n    \\item \\todo{does it worth?};\n    \\item $\\mu_{C_T}$, the mean of the tiles \\emph{color dispersion} $C_T$, being $C_T = \\sigma_R+\\sigma_G+\\sigma_B$, where $\\sigma_R$, $\\sigma_G$ and $\\sigma_B$ are the standard deviation of the red, green and blue channel values of the pixels within the tile $T$.",
+      "match": [
+        { "start": 192, "end": 203 },
+        { "start": 208, "end": 222 },
+        { "start": 274, "end": 279 },
+        { "start": 305, "end": 325 },
+        { "start": 401, "end": 460 },
+        { "start": 468, "end": 471 },
+        { "start": 572, "end": 583 },
+        { "start": 631, "end": 636 },
+        { "start": 644, "end": 678 },
+        { "start": 686, "end": 696 },
+        { "start": 698, "end": 708 },
+        { "start": 713, "end": 723 },
+        { "start": 823, "end": 826 }
+      ]
+    },
+    {
+      "string": "After applying a method to an image, we compare the segmented image (i.e., the result) against the ground truth and assess the performance according to the following three metrics:\n\\begin{itemize}\n    \\item average tile precision $P$\n    \\item average tile recall $R$\n    \\item tile count error $C$\n\\end{itemize}\nLet $T$ be a tile on the ground truth $\\mathcal{T}$ with area $A_T$.\nLet $T'$ be the tile in the segmented image which mostly overlaps $T$ and let $A_{T'}$ be the area of $T$; let $A_{T \\cap T'}$ be the overlapping area between $T$ and $T'$.\nLet $n$ and $n'$ the number of tiles respectively in the ground truth and in the segmented image.\nMetrics are defined as:\n\\begin{align}\n    P &amp;= \\frac{1}{n} \\sum_{T \\in \\mathcal{T}} \\frac{A_{T \\cap T'}}{A_{T'}} \\\\\n    R &amp;= \\frac{1}{n} \\sum_{T \\in \\mathcal{T}} \\frac{A_{T \\cap T'}}{A_T} \\\\\n    C &amp;= \\frac{|n-n'|}{n}\n\\end{align}",
+      "match": [
+        { "start": 230, "end": 233 },
+        { "start": 264, "end": 267 },
+        { "start": 295, "end": 298 },
+        { "start": 317, "end": 320 },
+        { "start": 351, "end": 364 },
+        { "start": 375, "end": 380 },
+        { "start": 386, "end": 390 },
+        { "start": 448, "end": 451 },
+        { "start": 460, "end": 468 },
+        { "start": 484, "end": 487 },
+        { "start": 493, "end": 508 },
+        { "start": 541, "end": 544 },
+        { "start": 549, "end": 553 },
+        { "start": 559, "end": 562 },
+        { "start": 567, "end": 571 }
+      ]
+    }
+  ]
+}
